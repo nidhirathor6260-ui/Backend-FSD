@@ -46,13 +46,3 @@ promise1.then((result)=>{
 // console.log("5");
 // console.log("6");
 // console.log(t1);
-
-const promise = new Promise((resolve, reject)=>{
-    resolve("")
-})
-
-promise.then((result)=>{
-
-}).catch((error)=>{
-
-})
