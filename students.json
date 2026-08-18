@@ -1,0 +1,14 @@
+{
+  "students": [
+    { "id": 1, "name": "Aarav Sharma", "course": "Computer Science" },
+    { "id": 2, "name": "Nidhi Verma", "course": "Information Technology" },
+    { "id": 3, "name": "Rohan Gupta", "course": "Mechanical Engineering" },
+    { "id": 4, "name": "Priya Singh", "course": "Electronics" },
+    { "id": 5, "name": "Karan Mehta", "course": "Civil Engineering" },
+    { "id": 6, "name": "Ananya Iyer", "course": "Biotechnology" },
+    { "id": 7, "name": "Vikram Patel", "course": "Mathematics" },
+    { "id": 8, "name": "Sneha Rao", "course": "Physics" },
+    { "id": 9, "name": "Aditya Khanna", "course": "Chemistry" },
+    { "id": 10, "name": "Meera Joshi", "course": "Economics" }
+  ]
+}
