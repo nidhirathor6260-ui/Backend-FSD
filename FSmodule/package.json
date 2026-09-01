@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "backend-fsd",
+  "version": "1.0.0",
+  "description": "Backend Full Stack Development module",
+  "homepage": "https://github.com/nidhirathor6260-ui/Backend-FSD#readme",
+  "bugs": {
+    "url": "https://github.com/nidhirathor6260-ui/Backend-FSD/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nidhirathor6260-ui/Backend-FSD.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "CRUD.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
