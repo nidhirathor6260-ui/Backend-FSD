@@ -1,54 +1,58 @@
 import express from 'express';
 
-import http from "http";
-
-const server = http.createServer((req, res) => {
-  res.writeHead(200, { "Content-Type": "text/html" });
-  res.write("Hello, World!");
-  res.write("<h1>Welcome to my server</h1>");
-  res.end();
-});
-
-
-server.listen(4000, () => {
-  console.log("Server is running on http://localhost:4000");
-});
 const app = express();
-
 app.use(express.json());
 
 let users = [
-    { id: 1, name: "Nidhi", email: "nidhi@example.com" },
-    { id: 2, name: "John", email: "john@example.com" }
+    { id: 1, name: "Nitin", email: "nitin@gmail.com" }
 ];
 
+// GET: fetch all users
 app.get('/users', (req, res) => {
     res.json(users);
 });
 
+// POST: create a new user
 app.post('/users', (req, res) => {
-    const newUser = {
+    const user = {
         id: users.length + 1,
         name: req.body.name,
         email: req.body.email
     };
-    users.push(newUser);
-    res.json(users);
+
+    users.push(user);
+    res.json(user);
 });
 
-// app.put('/users/:id', (req, res) => {
-//     const userId = parseInt(req.params.id);
-//     const updatedUser = req.body;
-//     const userIndex = users.findIndex(user => user.id === userId);
-//     if (userIndex === -1) return res.status(404).send('User not found');
-//     users[userIndex] = { ...users[userIndex], ...updatedUser };
-//     res.json(users[userIndex]);
-// });
+// PUT: update a user
+app.put('/users/:id', (req, res) => {
+    let user = users.find(u => u.id == req.params.id);
 
-// app.delete('/users/:id', (req, res) => {
-//     const userId = parseInt(req.params.id);
-//     const userIndex = users.findIndex(user => user.id === userId);
-//     if (userIndex === -1) return res.status(404).send('User not found');
-//     users.splice(userIndex, 1);
-//     res.status(200).send('User deleted');
-// });
+    if (!user) {
+        return res.status(404).json({ message: "User not found" });
+    }
+
+    user.name = req.body.name;
+    user.email = req.body.email;
+
+    res.json(user);
+});
+
+// DELETE: delete a user
+app.delete('/users/:id', (req, res) => {
+    users = users.filter(u => u.id != req.params.id);
+    res.send("User deleted successfully");
+});
+
+app.listen(8000, () => {
+    console.log("Server is running on http://localhost:8000");
+});
+
+
+// Create a product rest api and test all method in THUNDER CLIENT
+// Structure 
+// 1. create folder productrestapi;
+// 2. create index.js file
+// 3. create product.js file
+// 4. install npm init : package.json
+// 5. install express: npm i express
