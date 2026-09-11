@@ -1,0 +1,61 @@
+
+const products = [
+  { "id": 1, "name": "Anker 7-in-1 USB-C Hub", "category": "Tech", "price": 49.99, "stock": 120 },
+  { "id": 2, "name": "Tile Mate Bluetooth Tracker", "category": "Tech", "price": 24.99, "stock": 200 },
+  { "id": 3, "name": "Govee RGBIC LED Strip Lights", "category": "Tech", "price": 39.99, "stock": 150 },
+  { "id": 4, "name": "Kindle Paperwhite (11th Gen)", "category": "Tech", "price": 139.99, "stock": 80 },
+  { "id": 5, "name": "Logitech MX Master 3 Mouse", "category": "Tech", "price": 99.99, "stock": 95 },
+  { "id": 6, "name": "Apple AirPods Pro (2nd Gen)", "category": "Tech", "price": 249.99, "stock": 60 },
+  { "id": 7, "name": "Samsung Galaxy Tab S9", "category": "Tech", "price": 799.99, "stock": 40 },
+  { "id": 8, "name": "Sony WH-1000XM5 Headphones", "category": "Tech", "price": 349.99, "stock": 70 },
+  { "id": 9, "name": "Roku Streaming Stick 4K", "category": "Tech", "price": 49.99, "stock": 110 },
+  { "id": 10, "name": "Fitbit Charge 6", "category": "Tech", "price": 159.99, "stock": 85 },
+
+  { "id": 11, "name": "Instant Pot Duo 7-in-1", "category": "Kitchen", "price": 89.99, "stock": 100 },
+  { "id": 12, "name": "Ninja Air Fryer Max XL", "category": "Kitchen", "price": 129.99, "stock": 75 },
+  { "id": 13, "name": "KitchenAid Stand Mixer", "category": "Kitchen", "price": 399.99, "stock": 50 },
+  { "id": 14, "name": "Brita Water Filter Pitcher", "category": "Kitchen", "price": 34.99, "stock": 140 },
+  { "id": 15, "name": "Dyson V15 Detect Vacuum", "category": "Home", "price": 699.99, "stock": 30 },
+  { "id": 16, "name": "Owala FreeSip Water Bottle", "category": "Kitchen", "price": 22.99, "stock": 180 },
+  { "id": 17, "name": "Cuisinart Coffee Maker", "category": "Kitchen", "price": 79.99, "stock": 90 },
+  { "id": 18, "name": "Lodge Cast Iron Skillet", "category": "Kitchen", "price": 29.99, "stock": 200 },
+  { "id": 19, "name": "Simplehuman Trash Can", "category": "Home", "price": 149.99, "stock": 40 },
+  { "id": 20, "name": "Philips Hue Smart Bulbs", "category": "Home", "price": 49.99, "stock": 100 },
+
+  { "id": 21, "name": "Hydro Flask 32 oz Bottle", "category": "Outdoors", "price": 44.99, "stock": 130 },
+  { "id": 22, "name": "Black Diamond Spot 400 Headlamp", "category": "Outdoors", "price": 39.99, "stock": 90 },
+  { "id": 23, "name": "Coleman Sundome Tent", "category": "Outdoors", "price": 119.99, "stock": 60 },
+  { "id": 24, "name": "Yeti Tundra Cooler", "category": "Outdoors", "price": 349.99, "stock": 25 },
+  { "id": 25, "name": "Samsonite Winfield 3 Luggage", "category": "Travel", "price": 199.99, "stock": 70 },
+  { "id": 26, "name": "Osprey Daylite Backpack", "category": "Outdoors", "price": 69.99, "stock": 100 },
+  { "id": 27, "name": "Garmin Forerunner 265", "category": "Fitness", "price": 449.99, "stock": 40 },
+  { "id": 28, "name": "Therm-a-Rest Sleeping Pad", "category": "Outdoors", "price": 99.99, "stock": 80 },
+  { "id": 29, "name": "Leatherman Wave+ Multitool", "category": "Outdoors", "price": 109.99, "stock": 60 },
+  { "id": 30, "name": "Crocs Classic Clogs", "category": "Lifestyle", "price": 49.99, "stock": 200 },
+
+  { "id": 31, "name": "Withings Body+ Smart Scale", "category": "Fitness", "price": 99.99, "stock": 70 },
+  { "id": 32, "name": "Theragun Prime Massage Gun", "category": "Fitness", "price": 299.99, "stock": 50 },
+  { "id": 33, "name": "Peloton Bike+", "category": "Fitness", "price": 1999.99, "stock": 20 },
+  { "id": 34, "name": "Manduka Yoga Mat", "category": "Fitness", "price": 129.99, "stock": 90 },
+  { "id": 35, "name": "NutriBullet Blender", "category": "Kitchen", "price": 89.99, "stock": 100 },
+  { "id": 36, "name": "Oura Ring 5", "category": "Fitness", "price": 349.99, "stock": 40 },
+  { "id": 37, "name": "WHOOP Strap 5.0", "category": "Fitness", "price": 299.99, "stock": 35 },
+  { "id": 38, "name": "Bowflex Adjustable Dumbbells", "category": "Fitness", "price": 499.99, "stock": 25 },
+  { "id": 39, "name": "Apple Watch Series 10", "category": "Tech", "price": 499.99, "stock": 60 },
+  { "id": 40, "name": "Sonicare Electric Toothbrush", "category": "Wellness", "price": 79.99, "stock": 100 },
+
+  { "id": 41, "name": "iRobot Roomba j7+", "category": "Home", "price": 799.99, "stock": 30 },
+  { "id": 42, "name": "Eufy Security Camera", "category": "Home", "price": 129.99, "stock": 80 },
+  { "id": 43, "name": "Nest Thermostat", "category": "Home", "price": 249.99, "stock": 50 },
+  { "id": 44, "name": "IKEA Kallax Shelf Unit", "category": "Home", "price": 79.99, "stock": 100 },
+  { "id": 45, "name": "Philips Air Purifier", "category": "Home", "price": 299.99, "stock": 40 },
+  { "id": 46, "name": "TP-Link WiFi 6 Router", "category": "Tech", "price": 149.99, "stock": 70 },
+  { "id": 47, "name": "Canon EOS R10 Camera", "category": "Tech", "price": 999.99, "stock": 25 },
+  { "id": 48, "name": "Dell XPS 13 Laptop", "category": "Tech", "price": 1299.99, "stock": 30 },
+  { "id": 49, "name": "HP Envy Printer", "category": "Tech", "price": 199.99, "stock": 60 },
+  { "id": 50, "name": "Microsoft Surface Pro 10", "category": "Tech", "price": 1099.99, "stock": 40 },
+
+  { "id": 51, "name": "Google Pixel 9", "category": "Tech", "price": 899.99, "stock": 50 }
+]
+
+export default products;
