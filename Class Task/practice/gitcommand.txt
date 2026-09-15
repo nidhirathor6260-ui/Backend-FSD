@@ -1,0 +1,43 @@
+# 🚀 Setup
+git init                          # Initialize a new repository
+git clone <url>                   # Clone an existing repository
+git config --global user.name "Your Name"
+git config --global user.email "your@email.com"
+
+# 📂 Working with Files
+git status                        # Show current changes
+git add <file>                    # Stage a file
+git add .                         # Stage all changes
+git rm <file>                     # Remove a file from repo
+
+# 📝 Committing
+git commit -m "message"           # Commit staged changes
+git commit -a -m "message"        # Commit tracked files directly
+git commit --amend                # Edit last commit
+
+# 🌿 Branching
+git branch                        # List branches
+git branch <name>                 # Create branch
+git checkout <name>               # Switch branch
+git checkout -b <name>            # Create + switch branch
+git branch -d <name>              # Delete branch (safe)
+git branch -D <name>              # Delete branch (force)
+
+# 🔄 Remote Work
+git remote add origin <url>       # Add remote repo
+git remote -v                     # View remotes
+git push origin <branch>          # Push changes
+git pull                          # Pull changes
+git fetch                         # Fetch without merge
+
+# 📜 History
+git log                           # Show commit history
+git log --oneline                 # Compact history
+git show <commit>                 # Show commit details
+git blame <file>                  # Show who changed each line
+
+# ⚡ Undo & Fix
+git reset --hard                  # Reset to last commit
+git restore <file>                # Discard changes in file
+git stash                         # Save work temporarily
+git stash pop                     # Reapply stashed changes
