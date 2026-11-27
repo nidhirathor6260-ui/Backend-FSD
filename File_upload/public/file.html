@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Upload your File here!</h1>
+    <input type="file" id="fileInput" name="file" placeholder="uplaod file">;
+    <button id="upload">Upload</button>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        
+        function uploadFile(){
+            const input = document.getElementById('fileInput');
+            const data = new FormData();
+            data.append('file', input.files[0]);
+
+        }
+        </script>
+</body> 
+</html>
